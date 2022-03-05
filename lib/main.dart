@@ -32,10 +32,19 @@ class MyApp extends StatelessWidget {
           ),
         ),
         textTheme: const TextTheme(
-          headline1: TextStyle(fontSize: 100.0, fontWeight: FontWeight.bold),
-          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+          headline1: TextStyle(
+            fontSize: 100.0,
+            fontWeight: FontWeight.bold,
+          ),
+          headline6: TextStyle(
+            fontSize: 36.0,
+          ),
+          bodyText1: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+          ),
         ),
+        fontFamily: 'Raleway',
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
       routes: {

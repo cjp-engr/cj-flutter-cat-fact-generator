@@ -7,14 +7,23 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        minimum: const EdgeInsets.all(20),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/my_cat.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text(
-              'Cat Facts',
-              style: Theme.of(context).textTheme.headline1,
-              textAlign: TextAlign.center,
+            Card(
+              color: Colors.amber[300],
+              child: Text(
+                'Cat Facts',
+                style: Theme.of(context).textTheme.headline1,
+                textAlign: TextAlign.center,
+              ),
             ),
             Expanded(
               child: FittedBox(
@@ -25,12 +34,8 @@ class WelcomeScreen extends StatelessWidget {
                     Navigator.pushNamed(
                         context, DisplayCatFactImageScreen.routeName);
                   },
-                  child: const Text('Click to Start'),
-                  style: ElevatedButton.styleFrom(
-                    textStyle: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  child: const Text(
+                    'Click to Start',
                   ),
                 ),
               ),

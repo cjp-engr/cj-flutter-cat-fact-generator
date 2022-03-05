@@ -19,6 +19,7 @@ class _DisplayCatFactImageScreenState extends State<DisplayCatFactImageScreen> {
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
     return Scaffold(
+      backgroundColor: Colors.amber[300],
       body: Column(
         children: [
           SizedBox(
@@ -44,7 +45,9 @@ class _DisplayCatFactImageScreenState extends State<DisplayCatFactImageScreen> {
                           futureWidget;
                         });
                       },
-                      child: const Text('Generate Cat Fact'),
+                      child: const Text(
+                        'Generate Cat Fact',
+                      ),
                     ),
                   ),
                 ],
